@@ -1,0 +1,17 @@
+version: "2"
+
+services:
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - /data/mongo:/data/db
+  keystone:
+    build: .
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - 3000:3000
+    depends_on:
+      - mongodb
