@@ -5834,3 +5834,9 @@ button.close {
   display: block;
   max-width: 100%;
   height: auto; }
+
+.carousel-inner .item {
+  height: 360px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }

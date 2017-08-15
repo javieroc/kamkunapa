@@ -1,0 +1,19 @@
+div#carousel-example-generic(data-ride='carousel').carousel.slide
+	ol.carousel-indicators
+		li(data-target='#carousel-example-generic', data-slide-to='0').active
+		li(data-target='#carousel-example-generic', data-slide-to='1')
+	div(role="listbox").carousel-inner
+		div(style={'background-image': 'url(/images/kamkunapa.png)'}).item.active
+			.carousel-caption
+				h3 Kamkunapa
+				p Para ustedes
+		div(style={'background-image': 'url(/images/kamkunapa.png)'}).item
+			.carousel-caption
+				h3 Kamkunapa
+				p Para ustedes
+	a(href='#carousel-example-generic', role='button', data-slide='prev').left.carousel-control
+		span(aria-hidden='true').glyphicon.glyphicon-chevron-left
+		span.sr-only Previous
+	a(href='#carousel-example-generic', role='button', data-slide='next').right.carousel-control
+		span(aria-hidden='true').glyphicon.glyphicon-chevron-right
+		span.sr-only Next
