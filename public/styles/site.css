@@ -5840,3 +5840,12 @@ button.close {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover; }
+
+#whatwedo-title {
+  text-align: center; }
+
+.obs-item h4 {
+  margin-top: 0px; }
+
+.obs-item img {
+  width: 100%; }
