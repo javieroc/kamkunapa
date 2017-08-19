@@ -53,7 +53,15 @@ html
 						.collapse.navbar-collapse
 							ul.nav.navbar-nav.navbar-left
 								each link in navLinks
-									li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
+									if (link.sublinks.length)
+										li(class='dropdown')
+											a(href='#', class='dropdown-toggle', data-toggle='dropdown' role='button')= link.label
+												span.caret
+											ul.dropdown-menu
+												each sublink in link.sublinks
+													li: a(href=sublink.href)= sublink.label
+									else
+										li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
 							ul.nav.navbar-nav.navbar-right
 								if user
 									if user.canAccessKeystone

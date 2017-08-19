@@ -19,10 +19,91 @@ var _ = require('lodash');
 */
 exports.initLocals = function (req, res, next) {
 	res.locals.navLinks = [
-		{ label: 'Home', key: 'home', href: '/' },
-		{ label: 'Blog', key: 'blog', href: '/blog' },
-		{ label: 'Gallery', key: 'gallery', href: '/gallery' },
-		{ label: 'Contact', key: 'contact', href: '/contact' },
+		{
+			label: 'Inicio',
+			key: 'home',
+			href: '/',
+			sublinks: []
+		},
+		{
+			label: 'Nosotros',
+			key: 'aboutus',
+			href: '/about-us',
+			sublinks: [
+				{
+					label: 'Misión',
+					href: '/about-us'
+				},
+				{
+					label: 'Visión',
+					href: '/about-us'
+				},
+				{
+					label: 'Valores',
+					href: '/about-us'
+				},
+				{
+					label: 'Equipo',
+					href: '/about-us'
+				},
+				{
+					label: 'Redes y Alianzas',
+					href: '/about-us'
+				},
+			]
+		},
+		{
+			label: 'Presentación',
+			key: 'services',
+			href: '/services',
+			sublinks: [
+				{
+					label: 'Ejes temáticos de trabajo',
+					href: '/services'
+				},
+				{
+					label: 'Plan estratégico',
+					href: '/services'
+				},
+				{
+					label: 'Financiamiento',
+					href: '/services'
+				},
+				{
+					label: 'Voluntariado',
+					href: '/services'
+				},
+			]
+		},
+		{
+			label: 'Únete',
+			key: 'joinus',
+			href: '/join-us',
+			sublinks: [
+				{
+					label: 'Donaciones',
+					href: '/join-us'
+				},
+				{
+					label: 'Patrocinio',
+					href: '/join-us'
+				},
+				{
+					label: 'Responsabilidad Social Empresaria',
+					href: '/join-us'
+				},
+				{
+					label: 'Voluntarios',
+					href: '/join-us'
+				},
+			]
+		},
+		{
+			label: 'Contactanos',
+			key: 'contact',
+			href: '/contact',
+			sublinks: []
+		},
 	];
 	res.locals.user = req.user;
 	next();
